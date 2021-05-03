@@ -1,0 +1,23 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Update module",
+            "type": "shell",
+            "command": "odoo-bin -c odoo.conf -u price-calculations --stop-after-init",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Update all modules",
+            "type": "shell",
+            "command": "odoo-bin -c odoo.conf -u all --stop-after-init",
+            "problemMatcher": [],
+        }
+    ]
+}
